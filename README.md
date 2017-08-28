@@ -1,6 +1,6 @@
-# gcc-arm-none-eabi
+# gcc-arm-none-eabi-docker
 
-`gcc-arm-none-eabi` from Debian Testing. The default workdir is `/source`, so
+`gcc-arm-none-eabi` from Debian Stable. The default workdir is `/source`, so
 mount a volume there.
 
 ```bash
@@ -8,14 +8,12 @@ mount a volume there.
 docker run \
     --rm \
     --volume "${PWD}":/source \
-    --volume "${PWD}/build":/build \
-    leojrfs/gcc-arm-none-eabi
+    leojrfs/gcc-arm-none-eabi-docker
 
 # But you can pass anything
 docker run \
     --rm \
     --volume "${PWD}":/source \
-    --volume "${PWD}/build":/build \
-    leojrfs/gcc-arm-none-eabi \
+    leojrfs/gcc-arm-none-eabi-docker \
     make dist
 ```
