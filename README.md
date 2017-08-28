@@ -9,13 +9,13 @@ docker run \
     --rm \
     --volume "${PWD}":/source \
     --volume "${PWD}/build":/build \
-    mikewhy/gcc-arm-none-eabi
+    leojrfs/gcc-arm-none-eabi
 
 # But you can pass anything
 docker run \
     --rm \
     --volume "${PWD}":/source \
     --volume "${PWD}/build":/build \
-    mikewhy/gcc-arm-none-eabi \
+    leojrfs/gcc-arm-none-eabi \
     make dist
 ```
